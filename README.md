@@ -55,3 +55,27 @@ with open("saida.txt", "w") as saida:
 ```
 
 Esse exemplo lê a primeira linha de `entrada.txt` e a grava em `saida.txt`. `readline()` lê uma linha por vez, `write()` grava o texto recebido e `with` fecha cada arquivo automaticamente. Nos desafios, o modo `"w"` faz a saída ser gerada novamente a cada execução; com `"a"`, novas linhas seriam acrescentadas ao resultado anterior.
+
+## Exemplos para praticar
+
+Cada assunto abaixo tem um arquivo Python na pasta [`exemplos`](exemplos/). Os trechos mostram a ideia principal; abra o arquivo para ver o programa completo.
+
+| Assunto | Exemplo rápido | Arquivo |
+| --- | --- | --- |
+| Trabalhando com arquivos | `open("dados.txt", "r")` lê; `"w"` substitui; `"a"` acrescenta. | [arquivos.py](exemplos/arquivos.py) |
+| Listas | `nomes.append("Ana")` adiciona um item; `nomes[0]` acessa o primeiro. | [listas.py](exemplos/listas.py) |
+| Formatando saídas | `"Preço: %.2f" % 5.5` produz `Preço: 5.50`. | [formatando_saidas.py](exemplos/formatando_saidas.py) |
+| Margem (largura) | `"%8s" % "Ana"` ocupa 8 posições: 5 espaços seguidos de `Ana`. | [margem.py](exemplos/margem.py) |
+| Alinhamento | `%10s` alinha à direita; `%-10s` alinha à esquerda. | [alinhamento.py](exemplos/alinhamento.py) |
+| Precisão | `"%.2f" % 5.679` produz `5.68`. | [precisao.py](exemplos/precisao.py) |
+| Preenchimento | `"%05d" % 42` produz `00042`. | [preenchimento.py](exemplos/preenchimento.py) |
+| Números com sinais | `"%+d" % 12` produz `+12`. | [numeros_com_sinais.py](exemplos/numeros_com_sinais.py) |
+
+No CMD, execute qualquer exemplo a partir da raiz do projeto, trocando o nome do arquivo conforme a tabela:
+
+```bat
+python exemplos\listas.py
+python exemplos\arquivos.py
+```
+
+O exemplo de arquivos cria `exemplos\exemplo_arquivo.txt` e mostra seu conteúdo no terminal. Ele recomeça esse arquivo a cada execução para demonstrar o modo `"w"`.
